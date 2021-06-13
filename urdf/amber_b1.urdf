@@ -7,6 +7,9 @@
   <material name="silver_default">
     <color rgba="0.700 0.700 0.700 1.000"/>
   </material>
+  <material name="opaque119125137">
+    <color rgba="0.4666666666666667 0.49019607843137253 0.5372549019607843 1.0"/>
+  </material>
   <transmission name="Rev2_tran">
     <type>transmission_interface/SimpleTransmission</type>
     <joint name="Rev2">
@@ -63,6 +66,76 @@
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
     <actuator name="Rev10_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev13_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev13">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev13_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev14_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev14">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev14_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev15_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev15">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev15_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev16_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev16">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev16_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev17_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev17">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev17_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev18_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev18">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev18_actr">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+  <transmission name="Rev20_tran">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="Rev20">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="Rev20_actr">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
@@ -137,7 +210,49 @@
     <mu2>0.2</mu2>
     <selfCollide>true</selfCollide>
   </gazebo>
-  <gazebo reference="TOP_1">
+  <gazebo reference="gripper_head_v1_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Garm1_v1_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Garm2_v1_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Garm1_left_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Garm2_left_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Yaw_right_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Yaw_left_1">
+    <material>Gazebo/Silver</material>
+    <mu1>0.2</mu1>
+    <mu2>0.2</mu2>
+    <selfCollide>true</selfCollide>
+  </gazebo>
+  <gazebo reference="Cover1_1">
     <material>Gazebo/Silver</material>
     <mu1>0.2</mu1>
     <mu2>0.2</mu2>
@@ -363,23 +478,163 @@
       </geometry>
     </collision>
   </link>
-  <link name="TOP_1">
+  <link name="gripper_head_v1_1">
     <inertial>
-      <origin rpy="0 0 0" xyz="-4.963925281376204e-07 -0.00019582783329597517 0.01611980646593192"/>
-      <mass value="0.15302388632599126"/>
-      <inertia ixx="4.6e-05" ixy="0.0" ixz="0.0" iyy="5e-05" iyz="0.0" izz="5.5e-05"/>
+      <origin rpy="0 0 0" xyz="-0.00023127268430785794 4.0565269390425876e-05 0.06450548283852242"/>
+      <mass value="1.3440613994784911"/>
+      <inertia ixx="0.001879" ixy="-4.2e-05" ixz="-1.4e-05" iyy="0.001648" iyz="3e-06" izz="0.000816"/>
     </inertial>
     <visual>
       <origin rpy="0 0 0" xyz="0.0 -0.000504 -0.701955"/>
       <geometry>
-        <mesh filename="package://amber_urdf_description/meshes/TOP_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://amber_urdf_description/meshes/gripper_head_v1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
       <material name="silver_default"/>
     </visual>
     <collision>
       <origin rpy="0 0 0" xyz="0.0 -0.000504 -0.701955"/>
       <geometry>
-        <mesh filename="package://amber_urdf_description/meshes/TOP_1.stl" scale="0.001 0.001 0.001"/>
+        <mesh filename="package://amber_urdf_description/meshes/gripper_head_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Garm1_v1_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.01142339286285327 0.005469675886271411 0.03332029659019209"/>
+      <mass value="0.04242624144126467"/>
+      <inertia ixx="1.9e-05" ixy="0.0" ixz="0.0" iyy="1.9e-05" iyz="2e-06" izz="3e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.004439 -0.035796 -0.798456"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm1_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.004439 -0.035796 -0.798456"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm1_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Garm2_v1_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.011494368992215495 0.003559922438370491 0.02472036320342974"/>
+      <mass value="0.04152241646366915"/>
+      <inertia ixx="1.2e-05" ixy="1e-06" ixz="-0.0" iyy="1.6e-05" iyz="-0.0" izz="5e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.008507 -0.012727 -0.815718"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.008507 -0.012727 -0.815718"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Garm1_left_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.00886367921658928 -0.00904741551475095 0.03332029658806501"/>
+      <mass value="0.04242624144126467"/>
+      <inertia ixx="1.9e-05" ixy="0.0" ixz="-0.0" iyy="1.9e-05" iyz="-2e-06" izz="3e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.016242 0.031141 -0.798456"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm1_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.016242 0.031141 -0.798456"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm1_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Garm2_left_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.009580549289645798 -0.007276580609441009 0.024720363202603735"/>
+      <mass value="0.04152241646366915"/>
+      <inertia ixx="1.2e-05" ixy="1e-06" ixz="0.0" iyy="1.6e-05" iyz="0.0" izz="5e-06"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.012174 0.008072 -0.815718"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm2_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.012174 0.008072 -0.815718"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Garm2_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Yaw_right_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.003175663516676549 -0.022299866594133536 0.024771853265351917"/>
+      <mass value="0.13411633515691568"/>
+      <inertia ixx="5e-05" ixy="-1e-06" ixz="3e-06" iyy="4.4e-05" iyz="1.6e-05" izz="1.9e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.00137 -0.034198 -0.859206"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Yaw_right_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.00137 -0.034198 -0.859206"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Yaw_right_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Yaw_left_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.010611408562765922 0.019868126962941598 0.024771853264752175"/>
+      <mass value="0.13411633515691568"/>
+      <inertia ixx="5e-05" ixy="-1e-06" ixz="-3e-06" iyy="4.4e-05" iyz="-1.6e-05" izz="1.9e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.012811 0.030689 -0.859206"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Yaw_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="silver_default"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.012811 0.030689 -0.859206"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Yaw_left_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="Cover1_1">
+    <inertial>
+      <origin rpy="0 0 0" xyz="0.007227292155078693 -0.0012744011834956168 0.023355135145045502"/>
+      <mass value="0.057836049894173285"/>
+      <inertia ixx="3.3e-05" ixy="-4e-06" ixz="-1e-06" iyy="1.3e-05" iyz="0.0" izz="2.2e-05"/>
+    </inertial>
+    <visual>
+      <origin rpy="0 0 0" xyz="0.027575 -0.005366 -0.768955"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Cover1_1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="opaque119125137"/>
+    </visual>
+    <collision>
+      <origin rpy="0 0 0" xyz="0.027575 -0.005366 -0.768955"/>
+      <geometry>
+        <mesh filename="package://amber_urdf_description/meshes/Cover1_1.stl" scale="0.001 0.001 0.001"/>
       </geometry>
     </collision>
   </link>
@@ -439,9 +694,58 @@
     <parent link="DOF6_LINK_1"/>
     <child link="DOF7_MOTOR_1"/>
   </joint>
-  <joint name="Rigid12" type="fixed">
+  <joint name="Rev13" type="continuous">
     <origin rpy="0 0 0" xyz="-0.0 0.0255 0.127896"/>
     <parent link="DOF6_LINK_1"/>
-    <child link="TOP_1"/>
+    <child link="gripper_head_v1_1"/>
+    <axis xyz="-0.0 0.0 -1.0"/>
+  </joint>
+  <joint name="Rev14" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.004439 0.035292 0.096501"/>
+    <parent link="gripper_head_v1_1"/>
+    <child link="Garm1_v1_1"/>
+    <axis xyz="0.984808 -0.173648 -0.0"/>
+    <limit effort="100" lower="-0.8" upper="0.1" velocity="6.159937255"/>
+    <mimic joint="Rev16" multiplier="-1.0" offset="0"/>
+  </joint>
+  <joint name="Rev15" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.008507 0.012223 0.113763"/>
+    <parent link="gripper_head_v1_1"/>
+    <child link="Garm2_v1_1"/>
+    <axis xyz="0.984808 -0.173648 -0.0"/>
+    <mimic joint="Rev14" multiplier="1.2" offset="0"/>
+  </joint>
+  <joint name="Rev16" type="revolute">
+    <origin rpy="0 0 0" xyz="-0.016242 -0.031645 0.096501"/>
+    <parent link="gripper_head_v1_1"/>
+    <child link="Garm1_left_1"/>
+    <axis xyz="0.984808 -0.173648 -0.0"/>
+    <limit effort="100" lower="-0.1" upper="0.8" velocity="6.159937255"/>
+  </joint>
+  <joint name="Rev17" type="continuous">
+    <origin rpy="0 0 0" xyz="-0.012174 -0.008576 0.113763"/>
+    <parent link="gripper_head_v1_1"/>
+    <child link="Garm2_left_1"/>
+    <axis xyz="0.984808 -0.173648 -0.0"/>
+    <mimic joint="Rev16" multiplier="1.2" offset="0"/>
+  </joint>
+  <joint name="Rev18" type="continuous">
+    <origin rpy="0 0 0" xyz="0.003069 -0.001598 0.06075"/>
+    <parent link="Garm1_v1_1"/>
+    <child link="Yaw_right_1"/>
+    <axis xyz="-0.984808 0.173648 0.0"/>
+    <mimic joint="Rev14" multiplier="1.533333333" offset="0"/>
+  </joint>
+  <joint name="Rev20" type="continuous">
+    <origin rpy="0 0 0" xyz="0.003431 0.000452 0.06075"/>
+    <parent link="Garm1_left_1"/>
+    <child link="Yaw_left_1"/>
+    <axis xyz="-0.984808 0.173648 0.0"/>
+    <mimic joint="Rev16" multiplier="1.533333333" offset="0"/>
+  </joint>
+  <joint name="Rigid22" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.027575 0.004862 0.067"/>
+    <parent link="gripper_head_v1_1"/>
+    <child link="Cover1_1"/>
   </joint>
 </robot>

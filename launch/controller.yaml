@@ -29,3 +29,31 @@ amber_urdf_controller:
     type: effort_controllers/JointPositionController
     joint: Rev10
     pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev13_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev13
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev14_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev14
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev15_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev15
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev16_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev16
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev17_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev17
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev18_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev18
+    pid: {p: 100.0, i: 0.01, d: 10.0}
+  Rev20_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: Rev20
+    pid: {p: 100.0, i: 0.01, d: 10.0}

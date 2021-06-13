@@ -4,5 +4,8 @@
 <material name="silver_default">
   <color rgba="0.700 0.700 0.700 1.000"/>
 </material>
+<material name="opaque119125137">
+  <color rgba="0.4666666666666667 0.49019607843137253 0.5372549019607843 1.0"/>
+</material>
 
 </robot>
